@@ -37,8 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.repeat = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // channel
@@ -115,6 +115,14 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Content";
             // 
+            // repeat
+            // 
+            this.repeat.Location = new System.Drawing.Point(312, 329);
+            this.repeat.Name = "repeat";
+            this.repeat.Size = new System.Drawing.Size(61, 21);
+            this.repeat.TabIndex = 9;
+            this.repeat.Text = "1";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -123,14 +131,6 @@
             this.label5.Size = new System.Drawing.Size(44, 12);
             this.label5.TabIndex = 10;
             this.label5.Text = "Repeat";
-            // 
-            // repeat
-            // 
-            this.repeat.Location = new System.Drawing.Point(312, 329);
-            this.repeat.Name = "repeat";
-            this.repeat.Size = new System.Drawing.Size(61, 21);
-            this.repeat.TabIndex = 9;
-            this.repeat.Text = "1";
             // 
             // DiscordWebhook
             // 
@@ -167,8 +167,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox repeat;
+        private System.Windows.Forms.Label label5;
     }
 }
 
