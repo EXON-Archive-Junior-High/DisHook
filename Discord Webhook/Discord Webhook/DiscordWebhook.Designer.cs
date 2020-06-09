@@ -37,6 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.repeat = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // channel
@@ -69,7 +71,7 @@
             // 
             // Send
             // 
-            this.Send.Location = new System.Drawing.Point(318, 351);
+            this.Send.Location = new System.Drawing.Point(321, 390);
             this.Send.Name = "Send";
             this.Send.Size = new System.Drawing.Size(75, 23);
             this.Send.TabIndex = 4;
@@ -113,11 +115,30 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Content";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(319, 314);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 12);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Repeat";
+            // 
+            // repeat
+            // 
+            this.repeat.Location = new System.Drawing.Point(312, 329);
+            this.repeat.Name = "repeat";
+            this.repeat.Size = new System.Drawing.Size(61, 21);
+            this.repeat.TabIndex = 9;
+            this.repeat.Text = "1";
+            // 
             // DiscordWebhook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.repeat);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -146,6 +167,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox repeat;
     }
 }
 

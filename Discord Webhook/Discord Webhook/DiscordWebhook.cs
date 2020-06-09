@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Discord_Webhook
@@ -29,7 +30,27 @@ namespace Discord_Webhook
                 dcWeb.ProfilePicture = image.Text;
                 dcWeb.UserName = name.Text;
                 dcWeb.WebHook = channel.Text;
-                dcWeb.SendMessage(content.Text);
+
+                if (repeat.Text == "")
+                {
+                    MessageBox.Show("숫자를 입력하세요");
+                    return;
+                }
+                if (Convert.ToInt32(repeat.Text) < 6)
+                {
+                    for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
+                    {
+                        dcWeb.SendMessage(content.Text);
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
+                    {
+                        dcWeb.SendMessage(content.Text);
+                        Thread.Sleep(3);
+                    }
+                }
             }
         }
     }

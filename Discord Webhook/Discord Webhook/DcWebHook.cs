@@ -28,6 +28,13 @@ public class DcWebHook : IDisposable
         discordValues.Remove("avatar_url");
         discordValues.Remove("content");
     }
+
+    public void Reset()
+    {
+        discordValues.Remove("username");
+        discordValues.Remove("avatar_url");
+        discordValues.Remove("content");
+    }
     
     public void Dispose()
     {
