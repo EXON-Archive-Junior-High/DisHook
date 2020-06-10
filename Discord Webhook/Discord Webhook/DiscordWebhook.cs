@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
 
 namespace Discord_Webhook
 {
@@ -55,6 +56,7 @@ namespace Discord_Webhook
             }
         }
 
+
         private void content_TextChanged(object sender, EventArgs e)
         {
             
@@ -69,6 +71,11 @@ namespace Discord_Webhook
         {
             Login login = new Login();
             login.ShowDialog();
+        }
+
+        public static void MainClose()
+        {
+            
         }
     }
 }

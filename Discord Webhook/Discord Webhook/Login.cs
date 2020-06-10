@@ -22,5 +22,16 @@ namespace Discord_Webhook
             Data.discordLink = webhookLink.Text;
             this.Close();
         }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+            if(Data.discordLink == null)
+            {
+                MessageBox.Show("apiLink를 입력하시지 않았습니다.");
+                e.Cancel = true;
+                
+            }
+        }
     }
 }
