@@ -20,7 +20,8 @@ namespace Discord_Webhook
 
         private void DiscordWebhook_Load(object sender, EventArgs e)
         {
-
+            Login login = new Login();
+            login.Show();
         }
 
         private void Send_Click(object sender, EventArgs e)
@@ -29,7 +30,7 @@ namespace Discord_Webhook
             {
                 dcWeb.ProfilePicture = image.Text;
                 dcWeb.UserName = name.Text;
-                dcWeb.WebHook = channel.Text;
+                dcWeb.WebHook = Data.discordLink;
 
                 if (repeat.Text == "")
                 {

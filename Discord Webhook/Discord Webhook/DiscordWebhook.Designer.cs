@@ -28,25 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.channel = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
             this.image = new System.Windows.Forms.TextBox();
             this.content = new System.Windows.Forms.TextBox();
             this.Send = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.repeat = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // channel
-            // 
-            this.channel.Location = new System.Drawing.Point(12, 67);
-            this.channel.Name = "channel";
-            this.channel.Size = new System.Drawing.Size(738, 21);
-            this.channel.TabIndex = 0;
             // 
             // name
             // 
@@ -78,15 +69,6 @@
             this.Send.Text = "Send";
             this.Send.UseVisualStyleBackColor = true;
             this.Send.Click += new System.EventHandler(this.Send_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(310, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 12);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Webhook Link";
             // 
             // label2
             // 
@@ -142,12 +124,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Send);
             this.Controls.Add(this.content);
             this.Controls.Add(this.image);
             this.Controls.Add(this.name);
-            this.Controls.Add(this.channel);
             this.Name = "DiscordWebhook";
             this.Text = "Discord Webhook";
             this.Load += new System.EventHandler(this.DiscordWebhook_Load);
@@ -157,13 +137,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox channel;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.TextBox image;
         private System.Windows.Forms.TextBox content;
         private System.Windows.Forms.Button Send;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
