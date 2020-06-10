@@ -15,12 +15,60 @@ public class DcWebHook : IDisposable
         dWebClient = new WebClient();
     }
 
+    private int?[] EnterIndex;
 
     public void SendMessage(string msgSend)
     {
+        EnterIndex = new int?[100];
+        int enterIndex = 0;
+
         discordValues.Add("username", UserName);
         discordValues.Add("avatar_url", ProfilePicture);
-        discordValues.Add("content", msgSend);
+
+        if (!msgSend.Contains(@"\n"))
+        {
+            discordValues.Add("content", msgSend);
+        }
+        else
+        {
+            char[] msgSendChar = new char[msgSend.Length];
+            for (int i = 0; i < msgSend.Length; i++)
+            {
+
+                foreach(char a in msgSend)
+                {
+                    int j = 0;
+
+                    msgSendChar[j] = a;
+                    j++;
+                }
+                if (msgSendChar[i] == '\\')
+                {
+                    if (msgSendChar[i++] == 'n')
+                    {
+                        EnterIndex[enterIndex] = msgSendChar[i];
+                        enterIndex++;
+                    }
+                }
+            }
+
+            for(int i = 0; i < EnterIndex.Length; i++)
+            {
+                if (EnterIndex[i] == null)
+                {
+                    return;
+                }
+                
+
+                foreach (/*하는중*/)
+                {
+                    
+                }
+            }
+
+
+        }
+
 
         dWebClient.UploadValues(WebHook, discordValues);
 

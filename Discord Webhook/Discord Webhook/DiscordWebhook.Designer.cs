@@ -59,6 +59,8 @@
             this.content.Name = "content";
             this.content.Size = new System.Drawing.Size(738, 21);
             this.content.TabIndex = 3;
+            this.content.TextChanged += new System.EventHandler(this.content_TextChanged);
+            this.content.KeyUp += new System.Windows.Forms.KeyEventHandler(this.content_KeyUp);
             // 
             // Send
             // 

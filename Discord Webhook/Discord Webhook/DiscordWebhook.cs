@@ -49,9 +49,22 @@ namespace Discord_Webhook
                     for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
                     {
                         dcWeb.SendMessage(content.Text);
-                        Thread.Sleep(3);
+                        Thread.Sleep(1 * 1000);
                     }
                 }
+            }
+        }
+
+        private void content_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void content_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                content.Text += @"\n";
             }
         }
     }
