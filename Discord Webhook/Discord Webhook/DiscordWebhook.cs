@@ -21,7 +21,7 @@ namespace Discord_Webhook
         private void DiscordWebhook_Load(object sender, EventArgs e)
         {
             Login login = new Login();
-            login.Show();
+            login.ShowDialog();
         }
 
         private void Send_Click(object sender, EventArgs e)
@@ -62,10 +62,13 @@ namespace Discord_Webhook
 
         private void content_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                content.Text += @"\n";
-            }
+
+        }
+
+        private void butLogOut_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.ShowDialog();
         }
     }
 }

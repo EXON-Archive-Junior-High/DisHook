@@ -37,6 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.repeat = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.butLogOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // name
@@ -56,8 +57,9 @@
             // content
             // 
             this.content.Location = new System.Drawing.Point(12, 260);
+            this.content.Multiline = true;
             this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(738, 21);
+            this.content.Size = new System.Drawing.Size(738, 85);
             this.content.TabIndex = 3;
             this.content.TextChanged += new System.EventHandler(this.content_TextChanged);
             this.content.KeyUp += new System.Windows.Forms.KeyEventHandler(this.content_KeyUp);
@@ -101,7 +103,7 @@
             // 
             // repeat
             // 
-            this.repeat.Location = new System.Drawing.Point(312, 329);
+            this.repeat.Location = new System.Drawing.Point(312, 363);
             this.repeat.Name = "repeat";
             this.repeat.Size = new System.Drawing.Size(61, 21);
             this.repeat.TabIndex = 9;
@@ -110,17 +112,28 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(319, 314);
+            this.label5.Location = new System.Drawing.Point(319, 348);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 12);
             this.label5.TabIndex = 10;
             this.label5.Text = "Repeat";
+            // 
+            // butLogOut
+            // 
+            this.butLogOut.Location = new System.Drawing.Point(713, 12);
+            this.butLogOut.Name = "butLogOut";
+            this.butLogOut.Size = new System.Drawing.Size(75, 23);
+            this.butLogOut.TabIndex = 11;
+            this.butLogOut.Text = "Log Out";
+            this.butLogOut.UseVisualStyleBackColor = true;
+            this.butLogOut.Click += new System.EventHandler(this.butLogOut_Click);
             // 
             // DiscordWebhook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.butLogOut);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.repeat);
             this.Controls.Add(this.label4);
@@ -148,6 +161,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox repeat;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button butLogOut;
     }
 }
 
