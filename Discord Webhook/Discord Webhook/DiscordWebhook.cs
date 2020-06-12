@@ -44,6 +44,7 @@ namespace Discord_Webhook
                     for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
                     {
                         dcWeb.SendMessage(contentCopy);
+                        
                     }
                 }
                 //서른개 넘어가면 1초도 에러
