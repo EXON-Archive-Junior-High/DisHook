@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
+using System.Windows;
 
 namespace Discord_Webhook
 {
@@ -24,7 +25,7 @@ namespace Discord_Webhook
             Login login = new Login();
             login.ShowDialog();
         }
-
+        static string contentCopy;
         private void Send_Click(object sender, EventArgs e)
         {
             using (DcWebHook dcWeb = new DcWebHook())
@@ -38,18 +39,23 @@ namespace Discord_Webhook
                     MessageBox.Show("숫자를 입력하세요");
                     return;
                 }
-                if (Convert.ToInt32(repeat.Text) < 6)
+                else if (Convert.ToInt32(repeat.Text) < 6)
                 {
                     for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
                     {
-                        dcWeb.SendMessage(content.Text);
+                        dcWeb.SendMessage(contentCopy);
                     }
+                }
+                //서른개 넘어가면 1초도 에러
+                else if (Convert.ToInt32(repeat.Text) <= 0)
+                {
+                    MessageBox.Show("0 이하의 수는 입력하실 수 없습니다.");
                 }
                 else
                 {
                     for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
                     {
-                        dcWeb.SendMessage(content.Text);
+                        dcWeb.SendMessage(contentCopy);
                         Thread.Sleep(1 * 1000);
                     }
                 }
@@ -64,7 +70,20 @@ namespace Discord_Webhook
 
         private void content_KeyUp(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (e.Shift)
+                {
+                    content.Text += Environment.NewLine;
+                }
+                else
+                {
+                    contentCopy = content.Text;
+                    content.Text = string.Empty;
+                    Send.PerformClick();
 
+                }
+            }
         }
 
         private void butLogOut_Click(object sender, EventArgs e)
@@ -76,6 +95,11 @@ namespace Discord_Webhook
         public static void MainClose()
         {
             
+        }
+
+        private void content_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

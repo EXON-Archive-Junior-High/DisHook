@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.webhookLink = new System.Windows.Forms.TextBox();
             this.butLogin = new System.Windows.Forms.Button();
@@ -36,24 +37,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(330, 137);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.Location = new System.Drawing.Point(227, 277);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 12);
+            this.label1.Size = new System.Drawing.Size(111, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "Webhook Link";
             // 
             // webhookLink
             // 
-            this.webhookLink.Location = new System.Drawing.Point(32, 152);
+            this.webhookLink.Location = new System.Drawing.Point(40, 316);
+            this.webhookLink.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.webhookLink.Name = "webhookLink";
-            this.webhookLink.Size = new System.Drawing.Size(738, 21);
+            this.webhookLink.Size = new System.Drawing.Size(522, 29);
             this.webhookLink.TabIndex = 6;
             // 
             // butLogin
             // 
-            this.butLogin.Location = new System.Drawing.Point(332, 399);
+            this.butLogin.Location = new System.Drawing.Point(231, 470);
+            this.butLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.butLogin.Name = "butLogin";
-            this.butLogin.Size = new System.Drawing.Size(75, 23);
+            this.butLogin.Size = new System.Drawing.Size(96, 45);
             this.butLogin.TabIndex = 8;
             this.butLogin.Text = "login";
             this.butLogin.UseVisualStyleBackColor = true;
@@ -61,12 +67,15 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(594, 548);
             this.Controls.Add(this.butLogin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.webhookLink);
+            this.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "Login";
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
