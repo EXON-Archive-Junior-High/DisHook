@@ -31,10 +31,11 @@ namespace Discord_Webhook
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             
-            if (Data.discordLink == string.Empty)
+            if (webhookLink.Text == string.Empty)
             {
-                MessageBox.Show("apiLink를 입력하시지 않았습니다.");
                 e.Cancel = true;
+                MessageBox.Show("apiLink를 입력하시지 않았습니다.");
+
                 
             }
         }
