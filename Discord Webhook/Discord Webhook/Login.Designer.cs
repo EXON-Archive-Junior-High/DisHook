@@ -56,6 +56,7 @@
             this.webhookLink.Name = "webhookLink";
             this.webhookLink.Size = new System.Drawing.Size(522, 29);
             this.webhookLink.TabIndex = 6;
+            this.webhookLink.KeyUp += new System.Windows.Forms.KeyEventHandler(this.webhookLink_KeyUp);
             // 
             // butLogin
             // 

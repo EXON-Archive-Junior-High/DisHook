@@ -39,5 +39,13 @@ namespace Discord_Webhook
                 
             }
         }
+
+        private void webhookLink_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                butLogin.PerformClick();
+            }
+        }
     }
 }
