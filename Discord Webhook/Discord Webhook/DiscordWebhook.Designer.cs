@@ -48,6 +48,7 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(223, 21);
             this.name.TabIndex = 1;
+            this.name.KeyUp += new System.Windows.Forms.KeyEventHandler(this.name_KeyUp);
             // 
             // image
             // 
@@ -56,6 +57,7 @@
             this.image.Name = "image";
             this.image.Size = new System.Drawing.Size(633, 21);
             this.image.TabIndex = 2;
+            this.image.KeyUp += new System.Windows.Forms.KeyEventHandler(this.image_KeyUp);
             // 
             // content
             // 
@@ -167,7 +169,10 @@
             this.Controls.Add(this.image);
             this.Controls.Add(this.name);
             this.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DiscordWebhook";
             this.Text = "Discord Webhook";
             this.Load += new System.EventHandler(this.DiscordWebhook_Load);

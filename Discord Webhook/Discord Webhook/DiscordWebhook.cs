@@ -102,5 +102,22 @@ namespace Discord_Webhook
         {
 
         }
+
+        private void name_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                image.Focus();
+            }
+        }
+
+
+        private void image_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                content.Focus();
+            }
+        }
     }
 }
