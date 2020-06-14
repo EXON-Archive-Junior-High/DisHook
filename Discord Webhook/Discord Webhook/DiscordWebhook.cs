@@ -75,7 +75,8 @@ namespace Discord_Webhook
             {
                 if (e.Shift)
                 {
-                    content.Text += Environment.NewLine;
+                    //굳이 필요 없는 코드 였음
+                    //content.Text += Environment.NewLine;
                 }
                 else
                 {
