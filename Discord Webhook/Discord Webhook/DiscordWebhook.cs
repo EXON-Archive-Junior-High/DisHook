@@ -25,7 +25,7 @@ namespace Discord_Webhook
             Login login = new Login();
             login.ShowDialog();
         }
-        static string contentCopy;
+
         private void Send_Click(object sender, EventArgs e)
         {
             using (DcWebHook dcWeb = new DcWebHook())
@@ -43,7 +43,7 @@ namespace Discord_Webhook
                 {
                     for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
                     {
-                        dcWeb.SendMessage(contentCopy);
+                        dcWeb.SendMessage(content.Text);
                         
                     }
                 }
@@ -56,7 +56,7 @@ namespace Discord_Webhook
                 {
                     for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
                     {
-                        dcWeb.SendMessage(contentCopy);
+                        dcWeb.SendMessage(content.Text);
                         Thread.Sleep(1 * 1000);
                     }
                 }
@@ -79,9 +79,9 @@ namespace Discord_Webhook
                 }
                 else
                 {
-                    contentCopy = content.Text;
-                    content.Text = string.Empty;
                     Send.PerformClick();
+                    content.Text = string.Empty;
+
 
                 }
             }

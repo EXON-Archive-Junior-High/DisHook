@@ -21,7 +21,7 @@ namespace Discord_Webhook
         {
             if (webhookLink.Text == string.Empty)
             {
-                MessageBox.Show("apiLink를 입력하시지 않았습니다.");
+                MessageBox.Show("WebHook Link를 입력하시지 않았습니다.");
                 return;
             }
             Data.discordLink = webhookLink.Text;
@@ -34,7 +34,7 @@ namespace Discord_Webhook
             if (webhookLink.Text == string.Empty)
             {
                 e.Cancel = true;
-                MessageBox.Show("apiLink를 입력하시지 않았습니다.");
+                MessageBox.Show("WebHook Link를 입력하시지 않았습니다.");
 
                 
             }

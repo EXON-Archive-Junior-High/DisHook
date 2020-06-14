@@ -77,18 +77,18 @@
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.Location = new System.Drawing.Point(110, 351);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(375, 20);
+            this.label2.Size = new System.Drawing.Size(408, 20);
             this.label2.TabIndex = 9;
-            this.label2.Text = "잘못된 링크를 입력할시 메세지를 보낼때 오류가 납니다.";
+            this.label2.Text = "잘못된 링크를 입력할 시 프로그램이 정상작동 되지 않습니다.";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(147, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(95, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 245);
+            this.pictureBox1.Size = new System.Drawing.Size(393, 263);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
