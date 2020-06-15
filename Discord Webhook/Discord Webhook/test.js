@@ -17,7 +17,9 @@ var params = {
     embeds: [myEmbed]
 }
 
-request.send(JSON.stringify(params));
+function SendEmbed(){
+    request.send(JSON.stringify(params));
+}
 
 // function that converts a color HEX to a valid Discord color
 function hexToDecimal(hex) {

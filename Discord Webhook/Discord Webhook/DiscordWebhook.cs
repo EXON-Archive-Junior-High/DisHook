@@ -41,14 +41,22 @@ namespace Discord_Webhook
                     MessageBox.Show("숫자를 입력하세요");
                     return;
                 }
+
                 else if (Convert.ToInt32(repeat.Text) < 6)
                 {
+                    if (content.Text == string.Empty)
+                    {
+                        MessageBox.Show("메세지는 null 일 수 없습니다.");
+                        return;
+                    }
                     for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
                     {
-                        dcWeb.SendMessage(content.Text);
+
+                        dcWeb.SendMessage(this?.content.Text);
                         
                     }
                 }
+
                 //서른개 넘어가면 1초도 에러
                 else if (Convert.ToInt32(repeat.Text) <= 0)
                 {
@@ -56,9 +64,10 @@ namespace Discord_Webhook
                 }
                 else
                 {
+
                     for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
                     {
-                        dcWeb.SendMessage(content.Text);
+                        dcWeb.SendMessage(this?.content.Text);
                         Thread.Sleep(1 * 1000);
                     }
                 }
