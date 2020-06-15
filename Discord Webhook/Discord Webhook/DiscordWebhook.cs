@@ -24,6 +24,8 @@ namespace Discord_Webhook
         {
             Login login = new Login();
             login.ShowDialog();
+
+
         }
 
         private void Send_Click(object sender, EventArgs e)
