@@ -30,48 +30,52 @@ namespace Discord_Webhook
 
         private void Send_Click(object sender, EventArgs e)
         {
-            using (DcWebHook dcWeb = new DcWebHook())
+            if (content.Text == string.Empty)
             {
-                dcWeb.ProfilePicture = image.Text;
-                dcWeb.UserName = name.Text;
-                dcWeb.WebHook = Data.discordLink;
-
-                if (repeat.Text == "")
+                Console.WriteLine("no eturn");
+            }
+            else
+            {
+                using (DcWebHook dcWeb = new DcWebHook())
                 {
-                    MessageBox.Show("숫자를 입력하세요");
-                    return;
-                }
+                    dcWeb.ProfilePicture = image.Text;
+                    dcWeb.UserName = name.Text;
+                    dcWeb.WebHook = Data.discordLink;
 
-                else if (Convert.ToInt32(repeat.Text) < 6)
-                {
-                    if (content.Text == string.Empty)
+
+                    if (repeat.Text == "")
                     {
-                        MessageBox.Show("메세지는 null 일 수 없습니다.");
+                        MessageBox.Show("숫자를 입력하세요");
                         return;
                     }
-                    for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
+
+                    else if (Convert.ToInt32(repeat.Text) < 6)
                     {
 
-                        dcWeb.SendMessage(this?.content.Text);
-                        
+                        for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
+                        {
+                            dcWeb.SendMessage(content.Text);
+
+                        }
                     }
-                }
 
-                //서른개 넘어가면 1초도 에러
-                else if (Convert.ToInt32(repeat.Text) <= 0)
-                {
-                    MessageBox.Show("0 이하의 수는 입력하실 수 없습니다.");
-                }
-                else
-                {
-
-                    for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
+                    //서른개 넘어가면 1초도 에러
+                    else if (Convert.ToInt32(repeat.Text) <= 0)
                     {
-                        dcWeb.SendMessage(this?.content.Text);
-                        Thread.Sleep(1 * 1000);
+                        MessageBox.Show("0 이하의 수는 입력하실 수 없습니다.");
+                    }
+                    else
+                    {
+
+                        for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
+                        {
+                            dcWeb.SendMessage(content.Text);
+                            Thread.Sleep(1 * 1000);
+                        }
                     }
                 }
             }
+
         }
 
 
