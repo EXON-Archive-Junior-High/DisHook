@@ -25,14 +25,14 @@ namespace Discord_Webhook
             Login login = new Login();
             login.ShowDialog();
 
-
+            Console.WriteLine("" == null);
         }
 
         private void Send_Click(object sender, EventArgs e)
         {
-            if (content.Text == string.Empty)
+            if (content.Text == null)
             {
-                Console.WriteLine("no eturn");
+                Console.WriteLine("Good");
             }
             else
             {
@@ -88,18 +88,13 @@ namespace Discord_Webhook
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (e.Shift)
-                {
-                    //굳이 필요 없는 코드 였음
-                    //content.Text += Environment.NewLine;
-                }
-                else
+                if (!e.Shift)
                 {
                     Send.PerformClick();
                     content.Text = string.Empty;
 
-
                 }
+
             }
         }
 
@@ -135,5 +130,7 @@ namespace Discord_Webhook
                 content.Focus();
             }
         }
+
+
     }
 }

@@ -52,20 +52,20 @@
             // 
             // image
             // 
-            this.image.Location = new System.Drawing.Point(21, 171);
+            this.image.Location = new System.Drawing.Point(116, 171);
             this.image.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(633, 21);
+            this.image.Size = new System.Drawing.Size(538, 21);
             this.image.TabIndex = 2;
             this.image.KeyUp += new System.Windows.Forms.KeyEventHandler(this.image_KeyUp);
             // 
             // content
             // 
-            this.content.Location = new System.Drawing.Point(21, 259);
+            this.content.Location = new System.Drawing.Point(128, 269);
             this.content.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.content.Multiline = true;
             this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(633, 252);
+            this.content.Size = new System.Drawing.Size(526, 252);
             this.content.TabIndex = 3;
             this.content.TextChanged += new System.EventHandler(this.content_TextChanged);
             this.content.KeyDown += new System.Windows.Forms.KeyEventHandler(this.content_KeyDown);
@@ -121,7 +121,7 @@
             // 
             // repeat
             // 
-            this.repeat.Location = new System.Drawing.Point(48, 89);
+            this.repeat.Location = new System.Drawing.Point(111, 89);
             this.repeat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.repeat.Name = "repeat";
             this.repeat.Size = new System.Drawing.Size(53, 21);
@@ -134,7 +134,7 @@
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
-            this.label5.Location = new System.Drawing.Point(49, 55);
+            this.label5.Location = new System.Drawing.Point(112, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 23);
             this.label5.TabIndex = 10;
