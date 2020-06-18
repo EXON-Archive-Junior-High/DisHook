@@ -146,7 +146,7 @@
             this.Send.AutoSize = true;
             this.Send.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Send.Depth = 0;
-            this.Send.Location = new System.Drawing.Point(421, 506);
+            this.Send.Location = new System.Drawing.Point(407, 515);
             this.Send.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Send.MouseState = MaterialSkin.MouseState.HOVER;
             this.Send.Name = "Send";
@@ -237,14 +237,13 @@
             this.Controls.Add(this.content);
             this.Controls.Add(this.image);
             this.Controls.Add(this.name);
-            this.Enabled = false;
             this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DiscordWebhook";
-            this.Text = " ";
+            this.Text = " DisHook";
             this.Load += new System.EventHandler(this.DiscordWebhook_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).EndInit();

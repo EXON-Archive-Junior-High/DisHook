@@ -25,7 +25,8 @@ namespace Discord_Webhook
             Login login = new Login();
             login.ShowDialog();
 
-            Menu("Chat", true);
+            ChangeMenu("Chat", true);
+
         }
 
 
@@ -74,9 +75,10 @@ namespace Discord_Webhook
 
         private void Send_Click_1(object sender, EventArgs e)
         {
-            if (content.Text == null)
+            if (content.Text == string.Empty)
             {
-                Console.WriteLine("Good");
+                MessageBox.Show("메세지를 입력하세요");
+                Console.WriteLine("Empty");
             }
             else
             {
@@ -129,7 +131,7 @@ namespace Discord_Webhook
 
 
 
-        private void Menu(string menu, bool visible)
+        private void ChangeMenu(string menu, bool visible)
         {
             switch (menu)
             {
@@ -151,14 +153,29 @@ namespace Discord_Webhook
             }
         }
 
+        private void VisibleMenu(string menu, bool visible)
+        {
+            switch (menu)
+            {
+                case "Chat":
+                    name.Visible = visible;
+                    image.Visible = visible;
+                    content.Visible = visible;
+                    repeat.Visible = visible;
+                    break;
+            }
+        }
+
         private void Chat_Click(object sender, EventArgs e)
         {
-            Menu("Chat", true);
+            VisibleMenu("Chat", true);
+            ChangeMenu("Chat", true);
         }
 
         private void setting_Click(object sender, EventArgs e)
         {
-            Menu("Setting", true);
+            ChangeMenu("Setting", true);
+            VisibleMenu("Chat", false);
         }
     }
 }
