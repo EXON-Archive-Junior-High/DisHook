@@ -10,6 +10,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Diagnostics;
 
 namespace Discord_Webhook
 {
@@ -25,6 +26,9 @@ namespace Discord_Webhook
             Login login = new Login();
             login.ShowDialog();
 
+
+            VisibleMenu("Chat", true);
+            VisibleMenu("Setting", false);
             ChangeMenu("Chat", true);
 
         }
@@ -145,10 +149,13 @@ namespace Discord_Webhook
 
                 case "Setting":
                     title.Text = "Setting";
-                    label2.Text = "Name";
-                    label3.Text = "Profile Image Link";
-                    label4.Text = "Content";
-                    label5.Text = "Repeat";
+                    label2.Text = "Developer";
+                    label1.Text = "EXON";
+                    label3.Text = "Info";
+                    label6.Text = "엑슨이 만든 디스코드 커스텀 웹훅 프로그램입니다.";
+                    label4.Text = "Contact";
+                    label7.Text = "Github: https://github.com/1-EXON \n" +
+                        "Discord: EXON#0062\n";
                     break;
             }
         }
@@ -162,20 +169,41 @@ namespace Discord_Webhook
                     image.Visible = visible;
                     content.Visible = visible;
                     repeat.Visible = visible;
+                    label5.Visible = visible;
                     break;
+
+                case "Setting":
+                    label1.Visible = visible;
+                    label6.Visible = visible;
+                    label7.Visible = visible;
+                
+                    break;
+
             }
         }
 
         private void Chat_Click(object sender, EventArgs e)
         {
             VisibleMenu("Chat", true);
+            VisibleMenu("Setting", false);
             ChangeMenu("Chat", true);
         }
 
         private void setting_Click(object sender, EventArgs e)
         {
             ChangeMenu("Setting", true);
+            VisibleMenu("Setting", true);
             VisibleMenu("Chat", false);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/1-EXON");
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/1-EXON");
         }
     }
 }
