@@ -43,11 +43,9 @@
             this.title = new System.Windows.Forms.Label();
             this.logout = new MaterialSkin.Controls.MaterialFlatButton();
             this.setting = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.setting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // name
@@ -166,9 +164,9 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.setting);
             this.panel1.Controls.Add(this.Chat);
-            this.panel1.Location = new System.Drawing.Point(19, 96);
+            this.panel1.Location = new System.Drawing.Point(19, 11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(68, 455);
+            this.panel1.Size = new System.Drawing.Size(68, 540);
             this.panel1.TabIndex = 13;
             // 
             // Chat
@@ -221,24 +219,12 @@
             this.setting.TabStop = false;
             this.setting.Click += new System.EventHandler(this.setting_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 54);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
             // DiscordWebhook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(762, 562);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.title);
             this.Controls.Add(this.panel1);
@@ -258,12 +244,11 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DiscordWebhook";
-            this.Text = "Discord Webhook";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.DiscordWebhook_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.setting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,7 +269,6 @@
         private System.Windows.Forms.Label title;
         private MaterialSkin.Controls.MaterialFlatButton logout;
         private System.Windows.Forms.PictureBox setting;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
