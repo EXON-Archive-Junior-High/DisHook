@@ -42,8 +42,10 @@
             this.Chat = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
             this.logout = new MaterialSkin.Controls.MaterialFlatButton();
+            this.setting = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setting)).BeginInit();
             this.SuspendLayout();
             // 
             // name
@@ -75,7 +77,6 @@
             this.content.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.content.Multiline = true;
             this.content.Name = "content";
-            this.content.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.content.Size = new System.Drawing.Size(613, 230);
             this.content.TabIndex = 3;
             this.content.TextChanged += new System.EventHandler(this.content_TextChanged);
@@ -161,6 +162,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.setting);
             this.panel1.Controls.Add(this.Chat);
             this.panel1.Location = new System.Drawing.Point(19, 11);
             this.panel1.Name = "panel1";
@@ -195,7 +197,7 @@
             this.logout.AutoSize = true;
             this.logout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.logout.Depth = 0;
-            this.logout.Location = new System.Drawing.Point(643, 19);
+            this.logout.Location = new System.Drawing.Point(680, 11);
             this.logout.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.logout.MouseState = MaterialSkin.MouseState.HOVER;
             this.logout.Name = "logout";
@@ -205,6 +207,17 @@
             this.logout.Text = "Log Out";
             this.logout.UseVisualStyleBackColor = true;
             this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
+            // setting
+            // 
+            this.setting.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("setting.BackgroundImage")));
+            this.setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.setting.Location = new System.Drawing.Point(5, 109);
+            this.setting.Name = "setting";
+            this.setting.Size = new System.Drawing.Size(58, 58);
+            this.setting.TabIndex = 16;
+            this.setting.TabStop = false;
+            this.setting.Click += new System.EventHandler(this.setting_Click);
             // 
             // DiscordWebhook
             // 
@@ -234,6 +247,7 @@
             this.Load += new System.EventHandler(this.DiscordWebhook_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setting)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,6 +267,7 @@
         private System.Windows.Forms.PictureBox Chat;
         private System.Windows.Forms.Label title;
         private MaterialSkin.Controls.MaterialFlatButton logout;
+        private System.Windows.Forms.PictureBox setting;
     }
 }
 

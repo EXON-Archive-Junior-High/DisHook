@@ -17,16 +17,6 @@ namespace Discord_Webhook
             InitializeComponent();
         }
 
-        private void butLogin_Click(object sender, EventArgs e)
-        {
-            if (webhookLink.Text == string.Empty)
-            {
-                MessageBox.Show("WebHook Link를 입력하시지 않았습니다.");
-                return;
-            }
-            Data.discordLink = webhookLink.Text;
-            this.Close();
-        }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -46,6 +36,18 @@ namespace Discord_Webhook
             {
                 butLogin.PerformClick();
             }
+        }
+
+
+        private void butLogin_Click_1(object sender, EventArgs e)
+        {
+            if (webhookLink.Text == string.Empty)
+            {
+                MessageBox.Show("WebHook Link를 입력하시지 않았습니다.");
+                return;
+            }
+            Data.discordLink = webhookLink.Text;
+            this.Close();
         }
     }
 }

@@ -127,10 +127,7 @@ namespace Discord_Webhook
             login.ShowDialog();
         }
 
-        private void Chat_Click(object sender, EventArgs e)
-        {
-            Menu("Chat", true);
-        }
+
 
         private void Menu(string menu, bool visible)
         {
@@ -143,7 +140,25 @@ namespace Discord_Webhook
                     label4.Text = "Content";
                     label5.Text = "Repeat";
                     break;
+
+                case "Setting":
+                    title.Text = "Setting";
+                    label2.Text = "Name";
+                    label3.Text = "Profile Image Link";
+                    label4.Text = "Content";
+                    label5.Text = "Repeat";
+                    break;
             }
+        }
+
+        private void Chat_Click(object sender, EventArgs e)
+        {
+            Menu("Chat", true);
+        }
+
+        private void setting_Click(object sender, EventArgs e)
+        {
+            Menu("Setting", true);
         }
     }
 }
