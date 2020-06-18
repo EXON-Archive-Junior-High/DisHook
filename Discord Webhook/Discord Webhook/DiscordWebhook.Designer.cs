@@ -125,7 +125,7 @@
             // repeat
             // 
             this.repeat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.repeat.Location = new System.Drawing.Point(117, 520);
+            this.repeat.Location = new System.Drawing.Point(429, 95);
             this.repeat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.repeat.Name = "repeat";
             this.repeat.Size = new System.Drawing.Size(61, 21);
@@ -138,7 +138,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(112, 495);
+            this.label5.Location = new System.Drawing.Point(424, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 23);
             this.label5.TabIndex = 10;
@@ -149,7 +149,7 @@
             this.Send.AutoSize = true;
             this.Send.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Send.Depth = 0;
-            this.Send.Location = new System.Drawing.Point(407, 515);
+            this.Send.Location = new System.Drawing.Point(116, 515);
             this.Send.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Send.MouseState = MaterialSkin.MouseState.HOVER;
             this.Send.Name = "Send";
@@ -167,9 +167,9 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.setting);
             this.panel1.Controls.Add(this.Chat);
-            this.panel1.Location = new System.Drawing.Point(19, 11);
+            this.panel1.Location = new System.Drawing.Point(19, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(68, 540);
+            this.panel1.Size = new System.Drawing.Size(68, 539);
             this.panel1.TabIndex = 13;
             // 
             // Chat
@@ -199,6 +199,9 @@
             // 
             this.logout.AutoSize = true;
             this.logout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout.BackgroundImage")));
+            this.logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.logout.Depth = 0;
             this.logout.Location = new System.Drawing.Point(680, 11);
             this.logout.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -208,7 +211,7 @@
             this.logout.Size = new System.Drawing.Size(68, 36);
             this.logout.TabIndex = 15;
             this.logout.Text = "Log Out";
-            this.logout.UseVisualStyleBackColor = true;
+            this.logout.UseVisualStyleBackColor = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // setting
