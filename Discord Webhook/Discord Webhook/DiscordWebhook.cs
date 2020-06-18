@@ -170,6 +170,7 @@ namespace Discord_Webhook
                     content.Visible = visible;
                     repeat.Visible = visible;
                     label5.Visible = visible;
+                    Send.Visible = visible;
                     break;
 
                 case "Setting":
