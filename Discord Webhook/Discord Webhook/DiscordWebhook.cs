@@ -25,10 +25,54 @@ namespace Discord_Webhook
             Login login = new Login();
             login.ShowDialog();
 
-            Console.WriteLine("" == null);
+            Menu("Chat", true);
         }
 
-        private void Send_Click(object sender, EventArgs e)
+
+        private void content_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void content_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (!e.Shift)
+                {
+                    Send.PerformClick();
+                    content.Text = string.Empty;
+
+                }
+
+            }
+        }
+
+
+
+        private void content_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void name_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                image.Focus();
+            }
+        }
+
+
+        private void image_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                content.Focus();
+            }
+        }
+
+        private void Send_Click_1(object sender, EventArgs e)
         {
             if (content.Text == null)
             {
@@ -75,62 +119,31 @@ namespace Discord_Webhook
                     }
                 }
             }
-
         }
 
-
-        private void content_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void content_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (!e.Shift)
-                {
-                    Send.PerformClick();
-                    content.Text = string.Empty;
-
-                }
-
-            }
-        }
-
-        private void butLogOut_Click(object sender, EventArgs e)
+        private void logout_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.ShowDialog();
         }
 
-        public static void MainClose()
+        private void Chat_Click(object sender, EventArgs e)
         {
-            
+            Menu("Chat", true);
         }
 
-        private void content_KeyDown(object sender, KeyEventArgs e)
+        private void Menu(string menu, bool visible)
         {
-
-        }
-
-        private void name_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
+            switch (menu)
             {
-                image.Focus();
+                case "Chat":
+                    title.Text = "Chat";
+                    label2.Text = "Name";
+                    label3.Text = "Profile Image Link";
+                    label4.Text = "Content";
+                    label5.Text = "Repeat";
+                    break;
             }
         }
-
-
-        private void image_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                content.Focus();
-            }
-        }
-
-
     }
 }
