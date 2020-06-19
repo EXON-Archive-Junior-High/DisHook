@@ -39,16 +39,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Send = new MaterialSkin.Controls.MaterialFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.setting = new System.Windows.Forms.PictureBox();
             this.Chat = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
             this.logout = new MaterialSkin.Controls.MaterialFlatButton();
-            this.setting = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Chat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.setting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chat)).BeginInit();
             this.SuspendLayout();
             // 
             // name
@@ -172,6 +172,17 @@
             this.panel1.Size = new System.Drawing.Size(68, 539);
             this.panel1.TabIndex = 13;
             // 
+            // setting
+            // 
+            this.setting.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("setting.BackgroundImage")));
+            this.setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.setting.Location = new System.Drawing.Point(5, 109);
+            this.setting.Name = "setting";
+            this.setting.Size = new System.Drawing.Size(58, 58);
+            this.setting.TabIndex = 16;
+            this.setting.TabStop = false;
+            this.setting.Click += new System.EventHandler(this.setting_Click);
+            // 
             // Chat
             // 
             this.Chat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Chat.BackgroundImage")));
@@ -214,17 +225,6 @@
             this.logout.UseVisualStyleBackColor = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
-            // setting
-            // 
-            this.setting.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("setting.BackgroundImage")));
-            this.setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.setting.Location = new System.Drawing.Point(5, 109);
-            this.setting.Name = "setting";
-            this.setting.Size = new System.Drawing.Size(58, 58);
-            this.setting.TabIndex = 16;
-            this.setting.TabStop = false;
-            this.setting.Click += new System.EventHandler(this.setting_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -249,6 +249,7 @@
             this.label6.Size = new System.Drawing.Size(50, 18);
             this.label6.TabIndex = 17;
             this.label6.Text = "label6";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -293,8 +294,8 @@
             this.Text = " DisHook";
             this.Load += new System.EventHandler(this.DiscordWebhook_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Chat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.setting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

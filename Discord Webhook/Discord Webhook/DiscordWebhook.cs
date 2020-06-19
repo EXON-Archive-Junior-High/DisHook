@@ -206,5 +206,10 @@ namespace Discord_Webhook
         {
             Process.Start("https://github.com/1-EXON");
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/1-EXON/DisHook");
+        }
     }
 }
