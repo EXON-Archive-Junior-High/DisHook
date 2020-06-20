@@ -164,9 +164,9 @@
             // 
             this.setting.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("setting.BackgroundImage")));
             this.setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.setting.Location = new System.Drawing.Point(5, 129);
+            this.setting.Location = new System.Drawing.Point(10, 129);
             this.setting.Name = "setting";
-            this.setting.Size = new System.Drawing.Size(58, 58);
+            this.setting.Size = new System.Drawing.Size(47, 46);
             this.setting.TabIndex = 16;
             this.setting.TabStop = false;
             this.setting.Click += new System.EventHandler(this.setting_Click);
@@ -175,9 +175,9 @@
             // 
             this.Chat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Chat.BackgroundImage")));
             this.Chat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Chat.Location = new System.Drawing.Point(5, 32);
+            this.Chat.Location = new System.Drawing.Point(10, 32);
             this.Chat.Name = "Chat";
-            this.Chat.Size = new System.Drawing.Size(55, 58);
+            this.Chat.Size = new System.Drawing.Size(47, 49);
             this.Chat.TabIndex = 15;
             this.Chat.TabStop = false;
             this.Chat.Click += new System.EventHandler(this.Chat_Click);
@@ -250,9 +250,9 @@
             this.logout.BackColor = System.Drawing.Color.Transparent;
             this.logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout.BackgroundImage")));
             this.logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logout.Location = new System.Drawing.Point(650, 12);
+            this.logout.Location = new System.Drawing.Point(661, 12);
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(100, 50);
+            this.logout.Size = new System.Drawing.Size(89, 43);
             this.logout.TabIndex = 21;
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click_1);
@@ -307,6 +307,7 @@
             this.Controls.Add(this.name);
             this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
