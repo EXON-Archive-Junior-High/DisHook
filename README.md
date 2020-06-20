@@ -1,5 +1,7 @@
 # DisHook
 디스코드의 웹훅 기능을 사용자가 쉽게 커스텀 할 수 있게 만든 프로그램입니다. </br>
+<img src="./Image/preview2.png">
+<img src="./Image/preview.png"> <br>
 <b>※저는 이 프로그램을 자신의 토큰을 쉽게 알 수 있고록 제작한 것 뿐이고 만일 이 코드를 악용할 경우, 책임은 사용자에게 있습니다</b> </br>
 [바로 소스코드 보기](https://github.com/1-EXON/DisHook/tree/master/Discord%20Webhook/Discord%20Webhook) </br>
 
