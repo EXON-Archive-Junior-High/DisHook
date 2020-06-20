@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data.cs" />
-    <Compile Include="DcEmbed.cs" />
     <Compile Include="DcWebHook.cs" />
     <Compile Include="DiscordWebhook.cs">
       <SubType>Form</SubType>
@@ -58,7 +57,6 @@
     <Compile Include="DiscordWebhook.Designer.cs">
       <DependentUpon>DiscordWebhook.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmbedType.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
