@@ -184,26 +184,55 @@ namespace Discord_Webhook
                     dcWeb.WebHook = Data.discordLink;
 
                     //Emved TEST
-
                     //NameValueCollection embed = new NameValueCollection
-                    //{
-                    //    {
-                    //        "username",
-                    //        this.name.Text
-                    //    },
-                    //    {
-                    //        "avatar_url",
-                    //        this.image.Text
-                    //    },
-                    //    {
-                    //        "content",
-                    //        this.content.Text
-                    //    },
+                    //{    
                     //    {
                     //        "title",
                     //        this.content.Text
+                    //    },
+                    //    {
+                    //        "description",
+                    //        "안녕"
+                    //    },
+                    //    {
+                    //        "color",
+                    //        "#ffffff"
                     //    }
                     //};
+                    //    NameValueCollection msg = new NameValueCollection
+                    //    {
+                    //        {
+                    //            "username",
+                    //            this.name.Text
+                    //        },
+                    //        {
+                    //            "avatar_url",
+                    //            this.image.Text
+                    //        },
+                    //        {
+                    //            "content",
+                    //            this.content.Text
+                    //        },
+                    //        { 
+                    //            "embeds",
+                    //            {
+                    //                {
+
+                    //                    "title",
+                    //                    this.content.Text
+                    //                },
+                    //                {
+                    //                    "description",
+                    //                    "안녕"
+                    //                },
+                    //                {
+                    //                    "color",
+                    //                    "#ffffff"
+                    //                },
+                    //            }
+                    //        }
+
+                    //    };
 
                     if (repeat.Text == "")
                     {
@@ -216,7 +245,7 @@ namespace Discord_Webhook
 
                         for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
                         {
-                            dcWeb.SendMessage(content.Text);
+                            dcWeb.SendMessage(content.Text);//
 
                         }
                     }
@@ -231,7 +260,7 @@ namespace Discord_Webhook
 
                         for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
                         {
-                            dcWeb.SendMessage(content.Text);
+                            dcWeb.SendMessage(content.Text);//
                             Thread.Sleep(1 * 1000);
                         }
                     }

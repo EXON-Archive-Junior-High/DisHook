@@ -29,6 +29,15 @@ public class DcWebHook : IDisposable
         Reset();
     }
 
+    public void SendMessage(NameValueCollection msgSend)
+    {
+
+        discordValues.Add(msgSend);
+
+        dWebClient.UploadValues(WebHook, discordValues);
+
+        Reset();
+    }
     public void Reset()
     {
         discordValues.Remove("username");
