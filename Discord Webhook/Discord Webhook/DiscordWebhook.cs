@@ -125,6 +125,7 @@ namespace Discord_Webhook
                     label6.Visible = visible;
                     label7.Visible = visible;
                     resetRepeat.Visible = visible;
+                    label8.Visible = visible;
                     break;
 
             }
