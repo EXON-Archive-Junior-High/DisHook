@@ -20,15 +20,10 @@ namespace Discord_Webhook
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Console.WriteLine("2");
-
-            if (Data.discordLink == string.Empty)
+            if (webhookLink.Text == string.Empty)
             {
-
                 e.Cancel = true;
                 MessageBox.Show("WebHook Link를 입력하시지 않았습니다.");
-
-                Console.WriteLine("1");
             }
         }
 
@@ -43,8 +38,7 @@ namespace Discord_Webhook
 
 
         private void log_in_Click(object sender, EventArgs e)
-        {
-
+        { 
             log_in_click();
         }
 
