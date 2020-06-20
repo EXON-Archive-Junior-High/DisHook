@@ -9,5 +9,7 @@ namespace Discord_Webhook
     static class Data
     {
         public static string discordLink { get; set; }
+
+        public static bool resetRepeat{ get; set; }
     }
 }

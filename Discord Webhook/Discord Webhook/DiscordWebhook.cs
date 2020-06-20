@@ -45,7 +45,7 @@ namespace Discord_Webhook
             {
                 if (!e.Shift)
                 {
-                    Send.Click += new EventHandler(Send_Click);
+                    Send_click();
                     content.Text = string.Empty;
 
                 }
@@ -124,7 +124,7 @@ namespace Discord_Webhook
                     label1.Visible = visible;
                     label6.Visible = visible;
                     label7.Visible = visible;
-                
+                    resetRepeat.Visible = visible;
                     break;
 
             }
@@ -160,6 +160,12 @@ namespace Discord_Webhook
         }
 
         private void Send_Click(object sender, EventArgs e)
+        {
+            Send_click();
+            content.Text = string.Empty;
+        }
+
+        private void Send_click()
         {
             if (content.Text == string.Empty)
             {
@@ -207,12 +213,21 @@ namespace Discord_Webhook
                     }
                 }
             }
-        }
 
+            if (Data.resetRepeat == true)
+            {
+                repeat.Text = "1";
+            }
+        }
         private void logout_Click_1(object sender, EventArgs e)
         {
             Login login = new Login();
             login.ShowDialog();
+        }
+
+        private void resetRepeat_CheckedChanged(object sender, EventArgs e)
+        {
+            Data.resetRepeat = resetRepeat.Checked;
         }
     }
 }

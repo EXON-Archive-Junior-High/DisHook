@@ -46,6 +46,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Send = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.resetRepeat = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.setting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).BeginInit();
@@ -255,12 +256,26 @@
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click_1);
             // 
+            // resetRepeat
+            // 
+            this.resetRepeat.AutoSize = true;
+            this.resetRepeat.BackColor = System.Drawing.Color.Transparent;
+            this.resetRepeat.ForeColor = System.Drawing.Color.White;
+            this.resetRepeat.Location = new System.Drawing.Point(117, 350);
+            this.resetRepeat.Name = "resetRepeat";
+            this.resetRepeat.Size = new System.Drawing.Size(102, 19);
+            this.resetRepeat.TabIndex = 23;
+            this.resetRepeat.Text = "Reset Repeat";
+            this.resetRepeat.UseVisualStyleBackColor = false;
+            this.resetRepeat.CheckedChanged += new System.EventHandler(this.resetRepeat_CheckedChanged);
+            // 
             // DiscordWebhook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(762, 562);
+            this.Controls.Add(this.resetRepeat);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.Send);
             this.Controls.Add(this.label7);
@@ -312,6 +327,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox Send;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.CheckBox resetRepeat;
     }
 }
 
