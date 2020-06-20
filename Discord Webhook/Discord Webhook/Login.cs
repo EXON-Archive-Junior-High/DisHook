@@ -42,6 +42,7 @@ namespace Discord_Webhook
 
         private void log_in_Click(object sender, EventArgs e)
         {
+            
             if (webhookLink.Text == string.Empty)
             {
                 MessageBox.Show("WebHook Link를 입력하시지 않았습니다.");
