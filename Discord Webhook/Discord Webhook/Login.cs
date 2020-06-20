@@ -34,12 +34,13 @@ namespace Discord_Webhook
         {
             if (e.KeyCode == Keys.Enter)
             {
-                butLogin.PerformClick();
+                log_in.Click += new EventHandler(log_in_Click);
             }
         }
 
 
-        private void butLogin_Click_1(object sender, EventArgs e)
+
+        private void log_in_Click(object sender, EventArgs e)
         {
             if (webhookLink.Text == string.Empty)
             {

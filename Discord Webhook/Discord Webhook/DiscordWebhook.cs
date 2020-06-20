@@ -45,7 +45,7 @@ namespace Discord_Webhook
             {
                 if (!e.Shift)
                 {
-                    Send.PerformClick();
+                    Send.Click += new EventHandler(Send_Click);
                     content.Text = string.Empty;
 
                 }
@@ -77,61 +77,8 @@ namespace Discord_Webhook
             }
         }
 
-        private void Send_Click_1(object sender, EventArgs e)
-        {
-            if (content.Text == string.Empty)
-            {
-                MessageBox.Show("메세지를 입력하세요");
-                Console.WriteLine("Empty");
-            }
-            else
-            {
-                using (DcWebHook dcWeb = new DcWebHook())
-                {
-                    dcWeb.ProfilePicture = image.Text;
-                    dcWeb.UserName = name.Text;
-                    dcWeb.WebHook = Data.discordLink;
 
 
-                    if (repeat.Text == "")
-                    {
-                        MessageBox.Show("숫자를 입력하세요");
-                        return;
-                    }
-
-                    else if (Convert.ToInt32(repeat.Text) < 6)
-                    {
-
-                        for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
-                        {
-                            dcWeb.SendMessage(content.Text);
-
-                        }
-                    }
-
-                    //서른개 넘어가면 1초도 에러
-                    else if (Convert.ToInt32(repeat.Text) <= 0)
-                    {
-                        MessageBox.Show("0 이하의 수는 입력하실 수 없습니다.");
-                    }
-                    else
-                    {
-
-                        for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
-                        {
-                            dcWeb.SendMessage(content.Text);
-                            Thread.Sleep(1 * 1000);
-                        }
-                    }
-                }
-            }
-        }
-
-        private void logout_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            login.ShowDialog();
-        }
 
 
 
@@ -210,6 +157,62 @@ namespace Discord_Webhook
         private void label6_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/1-EXON/DisHook");
+        }
+
+        private void Send_Click(object sender, EventArgs e)
+        {
+            if (content.Text == string.Empty)
+            {
+                MessageBox.Show("메세지를 입력하세요");
+                Console.WriteLine("Empty");
+            }
+            else
+            {
+                using (DcWebHook dcWeb = new DcWebHook())
+                {
+                    dcWeb.ProfilePicture = image.Text;
+                    dcWeb.UserName = name.Text;
+                    dcWeb.WebHook = Data.discordLink;
+
+
+                    if (repeat.Text == "")
+                    {
+                        MessageBox.Show("숫자를 입력하세요");
+                        return;
+                    }
+
+                    else if (Convert.ToInt32(repeat.Text) < 6)
+                    {
+
+                        for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
+                        {
+                            dcWeb.SendMessage(content.Text);
+
+                        }
+                    }
+
+                    //서른개 넘어가면 1초도 에러
+                    else if (Convert.ToInt32(repeat.Text) <= 0)
+                    {
+                        MessageBox.Show("0 이하의 수는 입력하실 수 없습니다.");
+                    }
+                    else
+                    {
+
+                        for (int i = 0; i < Convert.ToInt32(repeat.Text); i++)
+                        {
+                            dcWeb.SendMessage(content.Text);
+                            Thread.Sleep(1 * 1000);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void logout_Click_1(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.ShowDialog();
         }
     }
 }

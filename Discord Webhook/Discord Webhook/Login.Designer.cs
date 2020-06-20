@@ -33,8 +33,9 @@
             this.webhookLink = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.butLogin = new MaterialSkin.Controls.MaterialFlatButton();
+            this.log_in = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.log_in)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -42,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(103, 173);
+            this.label1.Location = new System.Drawing.Point(103, 134);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 22);
@@ -51,7 +52,8 @@
             // 
             // webhookLink
             // 
-            this.webhookLink.Location = new System.Drawing.Point(39, 201);
+            this.webhookLink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.webhookLink.Location = new System.Drawing.Point(40, 162);
             this.webhookLink.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.webhookLink.Name = "webhookLink";
             this.webhookLink.Size = new System.Drawing.Size(277, 29);
@@ -64,7 +66,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 236);
+            this.label2.Location = new System.Drawing.Point(13, 197);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(331, 15);
@@ -76,36 +78,32 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(107, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(107, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(127, 119);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // butLogin
+            // log_in
             // 
-            this.butLogin.AutoSize = true;
-            this.butLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.butLogin.Depth = 0;
-            this.butLogin.Location = new System.Drawing.Point(139, 282);
-            this.butLogin.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.butLogin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.butLogin.Name = "butLogin";
-            this.butLogin.Primary = false;
-            this.butLogin.Size = new System.Drawing.Size(52, 36);
-            this.butLogin.TabIndex = 12;
-            this.butLogin.Text = "login";
-            this.butLogin.UseVisualStyleBackColor = true;
-            this.butLogin.Click += new System.EventHandler(this.butLogin_Click_1);
+            this.log_in.BackColor = System.Drawing.Color.Transparent;
+            this.log_in.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("log_in.BackgroundImage")));
+            this.log_in.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.log_in.Location = new System.Drawing.Point(107, 220);
+            this.log_in.Name = "log_in";
+            this.log_in.Size = new System.Drawing.Size(100, 50);
+            this.log_in.TabIndex = 22;
+            this.log_in.TabStop = false;
+            this.log_in.Click += new System.EventHandler(this.log_in_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(356, 333);
-            this.Controls.Add(this.butLogin);
+            this.ClientSize = new System.Drawing.Size(356, 282);
+            this.Controls.Add(this.log_in);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -119,6 +117,7 @@
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.log_in)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,6 +129,6 @@
         private System.Windows.Forms.TextBox webhookLink;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialFlatButton butLogin;
+        private System.Windows.Forms.PictureBox log_in;
     }
 }

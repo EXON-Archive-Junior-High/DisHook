@@ -37,18 +37,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.repeat = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Send = new MaterialSkin.Controls.MaterialFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.setting = new System.Windows.Forms.PictureBox();
             this.Chat = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
-            this.logout = new MaterialSkin.Controls.MaterialFlatButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.Send = new System.Windows.Forms.PictureBox();
+            this.logout = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.setting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Send)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // name
@@ -144,22 +146,6 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Repeat";
             // 
-            // Send
-            // 
-            this.Send.AutoSize = true;
-            this.Send.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Send.Depth = 0;
-            this.Send.Location = new System.Drawing.Point(116, 515);
-            this.Send.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.Send.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Send.Name = "Send";
-            this.Send.Primary = false;
-            this.Send.Size = new System.Drawing.Size(47, 36);
-            this.Send.TabIndex = 12;
-            this.Send.Text = "Send";
-            this.Send.UseVisualStyleBackColor = true;
-            this.Send.Click += new System.EventHandler(this.Send_Click_1);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
@@ -176,7 +162,7 @@
             // 
             this.setting.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("setting.BackgroundImage")));
             this.setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.setting.Location = new System.Drawing.Point(5, 109);
+            this.setting.Location = new System.Drawing.Point(5, 129);
             this.setting.Name = "setting";
             this.setting.Size = new System.Drawing.Size(58, 58);
             this.setting.TabIndex = 16;
@@ -187,9 +173,9 @@
             // 
             this.Chat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Chat.BackgroundImage")));
             this.Chat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Chat.Location = new System.Drawing.Point(7, 26);
+            this.Chat.Location = new System.Drawing.Point(5, 32);
             this.Chat.Name = "Chat";
-            this.Chat.Size = new System.Drawing.Size(54, 58);
+            this.Chat.Size = new System.Drawing.Size(55, 58);
             this.Chat.TabIndex = 15;
             this.Chat.TabStop = false;
             this.Chat.Click += new System.EventHandler(this.Chat_Click);
@@ -205,25 +191,6 @@
             this.title.Size = new System.Drawing.Size(77, 43);
             this.title.TabIndex = 14;
             this.title.Text = "Title";
-            // 
-            // logout
-            // 
-            this.logout.AutoSize = true;
-            this.logout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.logout.BackColor = System.Drawing.Color.Transparent;
-            this.logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout.BackgroundImage")));
-            this.logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.logout.Depth = 0;
-            this.logout.Location = new System.Drawing.Point(680, 11);
-            this.logout.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.logout.MouseState = MaterialSkin.MouseState.HOVER;
-            this.logout.Name = "logout";
-            this.logout.Primary = false;
-            this.logout.Size = new System.Drawing.Size(68, 36);
-            this.logout.TabIndex = 15;
-            this.logout.Text = "Log Out";
-            this.logout.UseVisualStyleBackColor = false;
-            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // label1
             // 
@@ -264,19 +231,43 @@
             this.label7.Text = "label7";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // Send
+            // 
+            this.Send.BackColor = System.Drawing.Color.Transparent;
+            this.Send.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Send.BackgroundImage")));
+            this.Send.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Send.Location = new System.Drawing.Point(117, 500);
+            this.Send.Name = "Send";
+            this.Send.Size = new System.Drawing.Size(100, 50);
+            this.Send.TabIndex = 20;
+            this.Send.TabStop = false;
+            this.Send.Click += new System.EventHandler(this.Send_Click);
+            // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout.BackgroundImage")));
+            this.logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logout.Location = new System.Drawing.Point(650, 12);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(100, 50);
+            this.logout.TabIndex = 21;
+            this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click_1);
+            // 
             // DiscordWebhook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(762, 562);
+            this.Controls.Add(this.logout);
+            this.Controls.Add(this.Send);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.logout);
             this.Controls.Add(this.title);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Send);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.repeat);
             this.Controls.Add(this.label4);
@@ -296,6 +287,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.setting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Send)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,15 +303,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox repeat;
         private System.Windows.Forms.Label label5;
-        private MaterialSkin.Controls.MaterialFlatButton Send;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox Chat;
         private System.Windows.Forms.Label title;
-        private MaterialSkin.Controls.MaterialFlatButton logout;
         private System.Windows.Forms.PictureBox setting;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox Send;
+        private System.Windows.Forms.PictureBox logout;
     }
 }
 
