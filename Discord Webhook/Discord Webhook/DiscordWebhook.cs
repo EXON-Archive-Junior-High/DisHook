@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Diagnostics;
+using System.Collections.Specialized;
+using System.Net;
 
 namespace Discord_Webhook
 {
@@ -23,9 +25,9 @@ namespace Discord_Webhook
 
         private void DiscordWebhook_Load(object sender, EventArgs e)
         {
+
             Login login = new Login();
             login.ShowDialog();
-
 
             VisibleMenu("Chat", true);
             VisibleMenu("Setting", false);
@@ -181,6 +183,27 @@ namespace Discord_Webhook
                     dcWeb.UserName = name.Text;
                     dcWeb.WebHook = Data.discordLink;
 
+                    //Emved TEST
+
+                    //NameValueCollection embed = new NameValueCollection
+                    //{
+                    //    {
+                    //        "username",
+                    //        this.name.Text
+                    //    },
+                    //    {
+                    //        "avatar_url",
+                    //        this.image.Text
+                    //    },
+                    //    {
+                    //        "content",
+                    //        this.content.Text
+                    //    },
+                    //    {
+                    //        "title",
+                    //        this.content.Text
+                    //    }
+                    //};
 
                     if (repeat.Text == "")
                     {
@@ -219,6 +242,7 @@ namespace Discord_Webhook
             {
                 repeat.Text = "1";
             }
+
         }
         private void logout_Click_1(object sender, EventArgs e)
         {

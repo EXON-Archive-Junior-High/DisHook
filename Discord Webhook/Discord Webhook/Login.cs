@@ -52,5 +52,10 @@ namespace Discord_Webhook
             Data.discordLink = webhookLink.Text;
             this.Close();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
