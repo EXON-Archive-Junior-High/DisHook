@@ -11,7 +11,9 @@
 </br>
 <b>빠른 설치</b> </br>
 
-[v1.0](https://github.com/1-EXON/DisHook/releases/download/v1.0/Setup.msi) 
+[v1.0](https://github.com/1-EXON/DisHook/releases/download/v1.0/Setup.msi) </br>
+[v1.1](https://github.com/1-EXON/DisHook/releases/download/v1.1/Setup.msi) </br>
+
 ### 활용법
 1. 설치를 하여 프로그램을 실행한다.
 2. 웹훅 링크를 복사하여 Log In 버튼을 클릭하거나 엔터를 누른다.
