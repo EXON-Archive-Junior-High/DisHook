@@ -48,11 +48,13 @@
             this.logout = new System.Windows.Forms.PictureBox();
             this.resetRepeat = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.help_but = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.setting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Send)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.help_but)).BeginInit();
             this.SuspendLayout();
             // 
             // name
@@ -282,12 +284,25 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Setting";
             // 
+            // help_but
+            // 
+            this.help_but.BackColor = System.Drawing.Color.Transparent;
+            this.help_but.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("help_but.BackgroundImage")));
+            this.help_but.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.help_but.Location = new System.Drawing.Point(690, 516);
+            this.help_but.Name = "help_but";
+            this.help_but.Size = new System.Drawing.Size(60, 35);
+            this.help_but.TabIndex = 25;
+            this.help_but.TabStop = false;
+            this.help_but.Click += new System.EventHandler(this.help_but_Click);
+            // 
             // DiscordWebhook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(762, 562);
+            this.Controls.Add(this.help_but);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.resetRepeat);
             this.Controls.Add(this.logout);
@@ -319,6 +334,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Send)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.help_but)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,6 +360,7 @@
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.CheckBox resetRepeat;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox help_but;
     }
 }
 

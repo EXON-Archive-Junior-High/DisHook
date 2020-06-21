@@ -283,5 +283,10 @@ namespace Discord_Webhook
         {
             Data.resetRepeat = resetRepeat.Checked;
         }
+
+        private void help_but_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.youtube.com/watch?v=MAsQZ71_LGM");
+        }
     }
 }
