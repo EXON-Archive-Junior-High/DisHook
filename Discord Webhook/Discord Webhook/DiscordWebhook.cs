@@ -13,7 +13,7 @@ using System.Windows;
 using System.Diagnostics;
 using System.Collections.Specialized;
 using System.Net;
-
+ 
 namespace Discord_Webhook
 {
     public partial class DiscordWebhook : Form
@@ -25,6 +25,7 @@ namespace Discord_Webhook
 
         private void DiscordWebhook_Load(object sender, EventArgs e)
         {
+            this.Text = "DisHook v1.3";
 
             Login login = new Login();
             login.ShowDialog();
