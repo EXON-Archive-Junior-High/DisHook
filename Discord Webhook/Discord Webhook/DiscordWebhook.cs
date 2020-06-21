@@ -48,7 +48,6 @@ namespace Discord_Webhook
                 if (!e.Shift)
                 {
                     Send_click();
-                    content.Text = string.Empty;
 
                 }
 
@@ -128,6 +127,7 @@ namespace Discord_Webhook
                     label7.Visible = visible;
                     resetRepeat.Visible = visible;
                     label8.Visible = visible;
+                    resetContent.Visible = visible;
                     break;
 
             }
@@ -165,7 +165,6 @@ namespace Discord_Webhook
         private void Send_Click(object sender, EventArgs e)
         {
             Send_click();
-            content.Text = string.Empty;
         }
 
         private void Send_click()
@@ -267,9 +266,14 @@ namespace Discord_Webhook
                 }
             }
 
-            if (Data.resetRepeat == true)
+            if (resetRepeat.Checked)
             {
                 repeat.Text = "1";
+            }
+
+            if (resetContent.Checked)
+            {
+                content.Text = string.Empty;
             }
 
         }
@@ -281,12 +285,17 @@ namespace Discord_Webhook
 
         private void resetRepeat_CheckedChanged(object sender, EventArgs e)
         {
-            Data.resetRepeat = resetRepeat.Checked;
+
         }
 
         private void help_but_Click(object sender, EventArgs e)
         {
             Process.Start("https://www.youtube.com/watch?v=MAsQZ71_LGM");
+        }
+
+        private void resetContent_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

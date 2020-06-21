@@ -49,6 +49,7 @@
             this.resetRepeat = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.help_but = new System.Windows.Forms.PictureBox();
+            this.resetContent = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.setting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).BeginInit();
@@ -296,12 +297,28 @@
             this.help_but.TabStop = false;
             this.help_but.Click += new System.EventHandler(this.help_but_Click);
             // 
+            // resetContent
+            // 
+            this.resetContent.AutoSize = true;
+            this.resetContent.BackColor = System.Drawing.Color.Transparent;
+            this.resetContent.Checked = true;
+            this.resetContent.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.resetContent.ForeColor = System.Drawing.Color.White;
+            this.resetContent.Location = new System.Drawing.Point(117, 360);
+            this.resetContent.Name = "resetContent";
+            this.resetContent.Size = new System.Drawing.Size(105, 19);
+            this.resetContent.TabIndex = 26;
+            this.resetContent.Text = "Reset Content";
+            this.resetContent.UseVisualStyleBackColor = false;
+            this.resetContent.CheckedChanged += new System.EventHandler(this.resetContent_CheckedChanged);
+            // 
             // DiscordWebhook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(762, 562);
+            this.Controls.Add(this.resetContent);
             this.Controls.Add(this.help_but);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.resetRepeat);
@@ -358,9 +375,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox Send;
         private System.Windows.Forms.PictureBox logout;
-        private System.Windows.Forms.CheckBox resetRepeat;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox help_but;
+        private System.Windows.Forms.CheckBox resetRepeat;
+        private System.Windows.Forms.CheckBox resetContent;
     }
 }
 
