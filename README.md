@@ -14,6 +14,7 @@
 </br>
 <b>빠른 설치</b> </br>
 
+[v1.3](https://github.com/1-EXON/DisHook/releases/download/v1.3/Setup.msi) </br>
 [v1.2](https://github.com/1-EXON/DisHook/releases/download/v1.2/Setup.msi) </br>
 [v1.1](https://github.com/1-EXON/DisHook/releases/download/v1.1/Setup.msi) </br>
 [v1.0](https://github.com/1-EXON/DisHook/releases/download/v1.0/Setup.msi) </br>
