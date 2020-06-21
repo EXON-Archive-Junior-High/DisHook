@@ -6,12 +6,17 @@
 [바로 소스코드 보기](https://github.com/1-EXON/DisHook/tree/master/Discord%20Webhook/Discord%20Webhook) </br>
 
 ## 사용법
+### 동영상
+[유튜브 설명 영상](https://www.youtube.com/watch?v=MAsQZ71_LGM) </br>
+(퀄리티 주의 매우 대충 만듬)
 ### 설치
 [릴리즈 설치 파일 바로가기](https://github.com/1-EXON/DisHook/releases) </br>
 </br>
 <b>빠른 설치</b> </br>
 
-[v1.0](https://github.com/1-EXON/DisHook/releases/download/v1.0/Setup.msi) 
+[v1.0](https://github.com/1-EXON/DisHook/releases/download/v1.0/Setup.msi) </br>
+[v1.1](https://github.com/1-EXON/DisHook/releases/download/v1.1/Setup.msi) </br>
+
 ### 활용법
 1. 설치를 하여 프로그램을 실행한다.
 2. 웹훅 링크를 복사하여 Log In 버튼을 클릭하거나 엔터를 누른다.
