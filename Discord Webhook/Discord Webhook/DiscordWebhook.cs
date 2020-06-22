@@ -342,6 +342,7 @@ namespace Discord_Webhook
                 label1.ForeColor = Color.Black;
                 label6.ForeColor = Color.Black;
                 label7.ForeColor = Color.Black;
+                label8.ForeColor = Color.Black;
 
                 Thema.ForeColor = Color.Black;
                 resetContent.ForeColor = Color.Black;
@@ -360,6 +361,7 @@ namespace Discord_Webhook
                 label1.ForeColor = Color.White;
                 label6.ForeColor = Color.White;
                 label7.ForeColor = Color.White;
+                label8.ForeColor = Color.White;
 
                 Thema.ForeColor = Color.White;
                 resetContent.ForeColor = Color.White;
