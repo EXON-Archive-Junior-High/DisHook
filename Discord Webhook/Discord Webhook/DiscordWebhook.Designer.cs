@@ -50,6 +50,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.help_but = new System.Windows.Forms.PictureBox();
             this.resetContent = new System.Windows.Forms.CheckBox();
+            this.buttonGradation = new System.Windows.Forms.CheckBox();
+            this.Thema = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.setting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).BeginInit();
@@ -265,7 +267,7 @@
             this.resetRepeat.AutoSize = true;
             this.resetRepeat.BackColor = System.Drawing.Color.Transparent;
             this.resetRepeat.ForeColor = System.Drawing.Color.White;
-            this.resetRepeat.Location = new System.Drawing.Point(117, 335);
+            this.resetRepeat.Location = new System.Drawing.Point(117, 360);
             this.resetRepeat.Name = "resetRepeat";
             this.resetRepeat.Size = new System.Drawing.Size(102, 19);
             this.resetRepeat.TabIndex = 23;
@@ -304,7 +306,7 @@
             this.resetContent.Checked = true;
             this.resetContent.CheckState = System.Windows.Forms.CheckState.Checked;
             this.resetContent.ForeColor = System.Drawing.Color.White;
-            this.resetContent.Location = new System.Drawing.Point(117, 360);
+            this.resetContent.Location = new System.Drawing.Point(117, 385);
             this.resetContent.Name = "resetContent";
             this.resetContent.Size = new System.Drawing.Size(105, 19);
             this.resetContent.TabIndex = 26;
@@ -312,12 +314,40 @@
             this.resetContent.UseVisualStyleBackColor = false;
             this.resetContent.CheckedChanged += new System.EventHandler(this.resetContent_CheckedChanged);
             // 
+            // buttonGradation
+            // 
+            this.buttonGradation.AutoSize = true;
+            this.buttonGradation.BackColor = System.Drawing.Color.Transparent;
+            this.buttonGradation.ForeColor = System.Drawing.Color.White;
+            this.buttonGradation.Location = new System.Drawing.Point(117, 410);
+            this.buttonGradation.Name = "buttonGradation";
+            this.buttonGradation.Size = new System.Drawing.Size(118, 19);
+            this.buttonGradation.TabIndex = 27;
+            this.buttonGradation.Text = "Button Gradation";
+            this.buttonGradation.UseVisualStyleBackColor = false;
+            this.buttonGradation.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // Thema
+            // 
+            this.Thema.AutoSize = true;
+            this.Thema.BackColor = System.Drawing.Color.Transparent;
+            this.Thema.ForeColor = System.Drawing.Color.White;
+            this.Thema.Location = new System.Drawing.Point(117, 335);
+            this.Thema.Name = "Thema";
+            this.Thema.Size = new System.Drawing.Size(98, 19);
+            this.Thema.TabIndex = 28;
+            this.Thema.Text = "Black Thema";
+            this.Thema.UseVisualStyleBackColor = false;
+            this.Thema.CheckedChanged += new System.EventHandler(this.Thema_CheckedChanged);
+            // 
             // DiscordWebhook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(762, 562);
+            this.Controls.Add(this.Thema);
+            this.Controls.Add(this.buttonGradation);
             this.Controls.Add(this.resetContent);
             this.Controls.Add(this.help_but);
             this.Controls.Add(this.label8);
@@ -379,6 +409,8 @@
         private System.Windows.Forms.PictureBox help_but;
         private System.Windows.Forms.CheckBox resetRepeat;
         private System.Windows.Forms.CheckBox resetContent;
+        private System.Windows.Forms.CheckBox buttonGradation;
+        private System.Windows.Forms.CheckBox Thema;
     }
 }
 

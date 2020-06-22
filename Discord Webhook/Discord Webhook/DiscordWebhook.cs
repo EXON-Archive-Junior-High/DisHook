@@ -25,7 +25,7 @@ namespace Discord_Webhook
 
         private void DiscordWebhook_Load(object sender, EventArgs e)
         {
-            this.Text = "DisHook v1.3";
+            this.Text = "DisHook v1.4";
 
             Login login = new Login();
             login.ShowDialog();
@@ -34,6 +34,8 @@ namespace Discord_Webhook
             VisibleMenu("Setting", false);
             ChangeMenu("Chat", true);
 
+            ButtonGradation();
+            ChageThema();
         }
 
 
@@ -129,6 +131,8 @@ namespace Discord_Webhook
                     resetRepeat.Visible = visible;
                     label8.Visible = visible;
                     resetContent.Visible = visible;
+                    buttonGradation.Visible = visible;
+                    Thema.Visible = visible;
                     break;
 
             }
@@ -297,6 +301,71 @@ namespace Discord_Webhook
         private void resetContent_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            ButtonGradation();
+        }
+
+        private void ButtonGradation()
+        {
+            if (!buttonGradation.Checked)
+            {
+                Chat.BackgroundImage = Image.FromFile(@"Image/commentWhite.png");
+                setting.BackgroundImage = Image.FromFile(@"Image/settingsWhite.png");
+            }
+            else
+            {
+                Chat.BackgroundImage = Image.FromFile(@"Image/comment.png");
+                setting.BackgroundImage = Image.FromFile(@"Image/settings.png");
+            }
+        }
+
+        private void Thema_CheckedChanged(object sender, EventArgs e)
+        {
+            ChageThema();
+        }
+
+        private void ChageThema()
+        {
+            if (Thema.Checked)
+            {
+                
+                this.BackgroundImage = Image.FromFile(@"Image/White.png");
+                title.ForeColor = Color.Black;
+                label2.ForeColor = Color.Black;
+                label3.ForeColor = Color.Black;
+                label4.ForeColor = Color.Black;
+                label5.ForeColor = Color.Black;
+
+                label1.ForeColor = Color.Black;
+                label6.ForeColor = Color.Black;
+                label7.ForeColor = Color.Black;
+
+                Thema.ForeColor = Color.Black;
+                resetContent.ForeColor = Color.Black;
+                resetRepeat.ForeColor = Color.Black;
+                buttonGradation.ForeColor = Color.Black;
+            }
+            else
+            {
+                this.BackgroundImage = Image.FromFile(@"Image/배경.png");
+                title.ForeColor = Color.White;
+                label2.ForeColor = Color.White;
+                label3.ForeColor = Color.White;
+                label4.ForeColor = Color.White;
+                label5.ForeColor = Color.White;
+
+                label1.ForeColor = Color.White;
+                label6.ForeColor = Color.White;
+                label7.ForeColor = Color.White;
+
+                Thema.ForeColor = Color.White;
+                resetContent.ForeColor = Color.White;
+                resetRepeat.ForeColor = Color.White;
+                buttonGradation.ForeColor = Color.White;
+            }
         }
     }
 }
