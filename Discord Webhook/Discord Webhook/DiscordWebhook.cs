@@ -329,7 +329,7 @@ namespace Discord_Webhook
 
         private void ChageThema()
         {
-            if (Thema.Checked)
+            if (!Thema.Checked)
             {
                 
                 this.BackgroundImage = Image.FromFile(@"Image/White.png");

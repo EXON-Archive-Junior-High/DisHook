@@ -331,6 +331,8 @@
             // 
             this.Thema.AutoSize = true;
             this.Thema.BackColor = System.Drawing.Color.Transparent;
+            this.Thema.Checked = true;
+            this.Thema.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Thema.ForeColor = System.Drawing.Color.White;
             this.Thema.Location = new System.Drawing.Point(117, 335);
             this.Thema.Name = "Thema";
