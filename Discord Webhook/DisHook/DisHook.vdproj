@@ -68,6 +68,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -92,6 +100,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -230,7 +246,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DisHook"
         "ProductCode" = "8:{608E38C2-9EDA-4D73-8AF3-2FA310E20F70}"
-        "PackageCode" = "8:{4D410D65-FC36-4E21-A146-2D9898E35213}"
+        "PackageCode" = "8:{5D25CF48-C800-41E7-B0BE-84EC09C68D87}"
         "UpgradeCode" = "8:{8D4B37A2-2F07-4BB7-BA20-0C496F5261C5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -245,7 +261,7 @@
         "Subject" = "8:"
         "ARPCONTACT" = "8:EXON"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8: 디스코드 터스텀 웹훅 프로그램"
+        "ARPCOMMENTS" = "8: 디스코드 커스텀 웹훅 프로그램"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
