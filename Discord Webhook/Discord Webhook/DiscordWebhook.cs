@@ -337,7 +337,7 @@ namespace Discord_Webhook
                 label2.ForeColor = Color.Black;
                 label3.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
-                label5.ForeColor = Color.Black;
+                label5.ForeColor = Color.Black; 
 
                 label1.ForeColor = Color.Black;
                 label6.ForeColor = Color.Black;
