@@ -25,7 +25,7 @@ namespace Discord_Webhook
 
         private void DiscordWebhook_Load(object sender, EventArgs e)
         {
-            this.Text = "DisHook v1.4";
+            this.Text = "DisHook v1.5";
 
             Login login = new Login();
             login.ShowDialog();
@@ -84,7 +84,7 @@ namespace Discord_Webhook
 
 
 
-
+        #region Menu
 
         private void ChangeMenu(string menu, bool visible)
         {
@@ -138,6 +138,8 @@ namespace Discord_Webhook
             }
         }
 
+        #endregion
+
         private void Chat_Click(object sender, EventArgs e)
         {
             VisibleMenu("Chat", true);
@@ -152,6 +154,7 @@ namespace Discord_Webhook
             VisibleMenu("Chat", false);
         }
 
+        #region Info
         private void label1_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/1-EXON");
@@ -166,6 +169,8 @@ namespace Discord_Webhook
         {
             Process.Start("https://github.com/1-EXON/DisHook");
         }
+
+        #endregion
 
         private void Send_Click(object sender, EventArgs e)
         {
@@ -187,7 +192,9 @@ namespace Discord_Webhook
                     dcWeb.UserName = name.Text;
                     dcWeb.WebHook = Data.discordLink;
 
-                    //Emved TEST
+                    #region Embed Test
+                    //Embed TEST
+
                     //NameValueCollection embed = new NameValueCollection
                     //{    
                     //    {
@@ -237,6 +244,7 @@ namespace Discord_Webhook
                     //        }
 
                     //    };
+                    #endregion
 
                     if (repeat.Text == "")
                     {
