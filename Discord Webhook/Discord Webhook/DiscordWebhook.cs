@@ -246,6 +246,8 @@ namespace Discord_Webhook
                     //    };
                     #endregion
 
+
+
                     if (repeat.Text == "")
                     {
                         MessageBox.Show("숫자를 입력하세요");
