@@ -22,6 +22,7 @@ public class DcWebHook : IDisposable
 
     public void SendMessage(string msgSend)
     {
+        #region TestSend
         //var json = new JObject();
         //var embeds = new JObject();
         //json.Add("username", UserName);
@@ -37,11 +38,13 @@ public class DcWebHook : IDisposable
         //    var response = client.PostAsync(WebHook,
         //         new StringContent(myJson, Encoding.UTF8, "application/json"));
         //}
+
+        #endregion
         discordValues.Add("username", UserName);
         discordValues.Add("avatar_url", ProfilePicture);
         discordValues.Add("content", msgSend);
 
-        dWebClient.UploadValues(WebHook, json);
+        dWebClient.UploadValues(WebHook, discordValues);
 
         Reset();
     }

@@ -50,9 +50,13 @@ namespace Discord_Webhook
             {
                 if (!e.Shift)
                 {
+                    //엔터지우기 하는중
+                    char[] contentChar = content.Text.ToCharArray();
+
                     Send_click();
 
                 }
+                
 
             }
         }
