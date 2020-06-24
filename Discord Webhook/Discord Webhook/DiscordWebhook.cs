@@ -326,13 +326,13 @@ namespace Discord_Webhook
         {
             if (!buttonGradation.Checked)
             {
-                Chat.BackgroundImage = Image.FromFile(@"Image/commentWhite.png");
-                setting.BackgroundImage = Image.FromFile(@"Image/settingsWhite.png");
+                Chat.BackgroundImage = Image.FromFile(@"Image/comment.png");
+                setting.BackgroundImage = Image.FromFile(@"Image/settings.png");
             }
             else
             {
-                Chat.BackgroundImage = Image.FromFile(@"Image/comment.png");
-                setting.BackgroundImage = Image.FromFile(@"Image/settings.png");
+                Chat.BackgroundImage = Image.FromFile(@"Image/1.png");
+                setting.BackgroundImage = Image.FromFile(@"Image/settings1.png");
             }
         }
 
