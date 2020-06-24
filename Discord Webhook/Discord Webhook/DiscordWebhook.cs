@@ -39,10 +39,6 @@ namespace Discord_Webhook
         }
 
 
-        private void content_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void content_KeyUp(object sender, KeyEventArgs e)
         {
@@ -58,30 +54,6 @@ namespace Discord_Webhook
                 }
                 
 
-            }
-        }
-
-
-
-        private void content_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void name_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                image.Focus();
-            }
-        }
-
-
-        private void image_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                content.Focus();
             }
         }
 
@@ -381,6 +353,27 @@ namespace Discord_Webhook
                 resetContent.ForeColor = Color.White;
                 resetRepeat.ForeColor = Color.White;
                 buttonGradation.ForeColor = Color.White;
+            }
+        }
+
+        private void content_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void image_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                content.Focus();
+            }
+        }
+
+        private void name_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                image.Focus();
             }
         }
     }

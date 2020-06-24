@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiscordWebhook));
-            this.name = new System.Windows.Forms.TextBox();
-            this.image = new System.Windows.Forms.TextBox();
-            this.content = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.repeat = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.setting = new System.Windows.Forms.PictureBox();
@@ -52,6 +48,10 @@
             this.resetContent = new System.Windows.Forms.CheckBox();
             this.buttonGradation = new System.Windows.Forms.CheckBox();
             this.Thema = new System.Windows.Forms.CheckBox();
+            this.name = new Guna.UI2.WinForms.Guna2TextBox();
+            this.repeat = new Guna.UI2.WinForms.Guna2TextBox();
+            this.image = new Guna.UI2.WinForms.Guna2TextBox();
+            this.content = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.setting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chat)).BeginInit();
@@ -59,41 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.help_but)).BeginInit();
             this.SuspendLayout();
-            // 
-            // name
-            // 
-            this.name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.name.Location = new System.Drawing.Point(117, 96);
-            this.name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(259, 21);
-            this.name.TabIndex = 1;
-            this.name.KeyUp += new System.Windows.Forms.KeyEventHandler(this.name_KeyUp);
-            // 
-            // image
-            // 
-            this.image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.image.Location = new System.Drawing.Point(117, 166);
-            this.image.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(613, 21);
-            this.image.TabIndex = 2;
-            this.image.KeyUp += new System.Windows.Forms.KeyEventHandler(this.image_KeyUp);
-            // 
-            // content
-            // 
-            this.content.BackColor = System.Drawing.Color.White;
-            this.content.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.content.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.content.Location = new System.Drawing.Point(117, 240);
-            this.content.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.content.Multiline = true;
-            this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(613, 230);
-            this.content.TabIndex = 3;
-            this.content.TextChanged += new System.EventHandler(this.content_TextChanged);
-            this.content.KeyDown += new System.Windows.Forms.KeyEventHandler(this.content_KeyDown);
-            this.content.KeyUp += new System.Windows.Forms.KeyEventHandler(this.content_KeyUp);
             // 
             // label2
             // 
@@ -130,16 +95,6 @@
             this.label4.Size = new System.Drawing.Size(63, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "Content";
-            // 
-            // repeat
-            // 
-            this.repeat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.repeat.Location = new System.Drawing.Point(429, 95);
-            this.repeat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.repeat.Name = "repeat";
-            this.repeat.Size = new System.Drawing.Size(61, 21);
-            this.repeat.TabIndex = 9;
-            this.repeat.Text = "1";
             // 
             // label5
             // 
@@ -342,12 +297,134 @@
             this.Thema.UseVisualStyleBackColor = false;
             this.Thema.CheckedChanged += new System.EventHandler(this.Thema_CheckedChanged);
             // 
+            // name
+            // 
+            this.name.BackColor = System.Drawing.Color.Transparent;
+            this.name.BorderColor = System.Drawing.Color.Transparent;
+            this.name.BorderRadius = 15;
+            this.name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.name.DefaultText = "";
+            this.name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.name.DisabledState.Parent = this.name;
+            this.name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.name.FocusedState.Parent = this.name;
+            this.name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.Color.Black;
+            this.name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.name.HoverState.Parent = this.name;
+            this.name.Location = new System.Drawing.Point(112, 95);
+            this.name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.name.Name = "name";
+            this.name.PasswordChar = '\0';
+            this.name.PlaceholderText = "";
+            this.name.SelectedText = "";
+            this.name.ShadowDecoration.Parent = this.name;
+            this.name.Size = new System.Drawing.Size(214, 30);
+            this.name.TabIndex = 29;
+            this.name.KeyUp += new System.Windows.Forms.KeyEventHandler(this.name_KeyUp_1);
+            // 
+            // repeat
+            // 
+            this.repeat.BackColor = System.Drawing.Color.Transparent;
+            this.repeat.BorderColor = System.Drawing.Color.Transparent;
+            this.repeat.BorderRadius = 15;
+            this.repeat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.repeat.DefaultText = "1";
+            this.repeat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.repeat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.repeat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.repeat.DisabledState.Parent = this.repeat;
+            this.repeat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.repeat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.repeat.FocusedState.Parent = this.repeat;
+            this.repeat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repeat.ForeColor = System.Drawing.Color.Black;
+            this.repeat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.repeat.HoverState.Parent = this.repeat;
+            this.repeat.Location = new System.Drawing.Point(428, 98);
+            this.repeat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.repeat.Name = "repeat";
+            this.repeat.PasswordChar = '\0';
+            this.repeat.PlaceholderText = "";
+            this.repeat.SelectedText = "";
+            this.repeat.SelectionStart = 1;
+            this.repeat.ShadowDecoration.Parent = this.repeat;
+            this.repeat.Size = new System.Drawing.Size(56, 30);
+            this.repeat.TabIndex = 30;
+            // 
+            // image
+            // 
+            this.image.BackColor = System.Drawing.Color.Transparent;
+            this.image.BorderColor = System.Drawing.Color.Transparent;
+            this.image.BorderRadius = 15;
+            this.image.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.image.DefaultText = "";
+            this.image.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.image.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.image.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.image.DisabledState.Parent = this.image;
+            this.image.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.image.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.image.FocusedState.Parent = this.image;
+            this.image.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.image.ForeColor = System.Drawing.Color.Black;
+            this.image.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.image.HoverState.Parent = this.image;
+            this.image.Location = new System.Drawing.Point(112, 168);
+            this.image.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.image.Name = "image";
+            this.image.PasswordChar = '\0';
+            this.image.PlaceholderText = "";
+            this.image.SelectedText = "";
+            this.image.ShadowDecoration.Parent = this.image;
+            this.image.Size = new System.Drawing.Size(539, 30);
+            this.image.TabIndex = 31;
+            this.image.KeyUp += new System.Windows.Forms.KeyEventHandler(this.image_KeyUp_1);
+            // 
+            // content
+            // 
+            this.content.BackColor = System.Drawing.Color.Transparent;
+            this.content.BorderColor = System.Drawing.Color.Transparent;
+            this.content.BorderRadius = 15;
+            this.content.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.content.DefaultText = "";
+            this.content.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.content.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.content.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.content.DisabledState.Parent = this.content;
+            this.content.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.content.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.content.FocusedState.Parent = this.content;
+            this.content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.content.ForeColor = System.Drawing.Color.Black;
+            this.content.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.content.HoverState.Parent = this.content;
+            this.content.Location = new System.Drawing.Point(112, 242);
+            this.content.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.content.Multiline = true;
+            this.content.Name = "content";
+            this.content.PasswordChar = '\0';
+            this.content.PlaceholderText = "";
+            this.content.SelectedText = "";
+            this.content.ShadowDecoration.Parent = this.content;
+            this.content.Size = new System.Drawing.Size(539, 234);
+            this.content.TabIndex = 32;
+            this.content.TextChanged += new System.EventHandler(this.content_TextChanged_1);
+            this.content.KeyUp += new System.Windows.Forms.KeyEventHandler(this.content_KeyUp);
+            // 
             // DiscordWebhook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(762, 562);
+            this.Controls.Add(this.content);
+            this.Controls.Add(this.image);
+            this.Controls.Add(this.repeat);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.Thema);
             this.Controls.Add(this.buttonGradation);
             this.Controls.Add(this.resetContent);
@@ -362,13 +439,9 @@
             this.Controls.Add(this.title);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.repeat);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.content);
-            this.Controls.Add(this.image);
-            this.Controls.Add(this.name);
             this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -389,13 +462,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox name;
-        private System.Windows.Forms.TextBox image;
-        private System.Windows.Forms.TextBox content;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox repeat;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox Chat;
@@ -412,6 +481,10 @@
         private System.Windows.Forms.CheckBox resetContent;
         private System.Windows.Forms.CheckBox buttonGradation;
         private System.Windows.Forms.CheckBox Thema;
+        private Guna.UI2.WinForms.Guna2TextBox name;
+        private Guna.UI2.WinForms.Guna2TextBox repeat;
+        private Guna.UI2.WinForms.Guna2TextBox image;
+        private Guna.UI2.WinForms.Guna2TextBox content;
     }
 }
 

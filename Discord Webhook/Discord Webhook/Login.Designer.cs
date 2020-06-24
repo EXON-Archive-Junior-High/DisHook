@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
-            this.webhookLink = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.log_in = new System.Windows.Forms.PictureBox();
+            this.webhookLink = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.log_in)).BeginInit();
             this.SuspendLayout();
@@ -49,16 +49,6 @@
             this.label1.Size = new System.Drawing.Size(131, 22);
             this.label1.TabIndex = 7;
             this.label1.Text = "Webhook Link";
-            // 
-            // webhookLink
-            // 
-            this.webhookLink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.webhookLink.Location = new System.Drawing.Point(40, 162);
-            this.webhookLink.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.webhookLink.Name = "webhookLink";
-            this.webhookLink.Size = new System.Drawing.Size(277, 29);
-            this.webhookLink.TabIndex = 6;
-            this.webhookLink.KeyUp += new System.Windows.Forms.KeyEventHandler(this.webhookLink_KeyUp);
             // 
             // label2
             // 
@@ -97,17 +87,47 @@
             this.log_in.TabStop = false;
             this.log_in.Click += new System.EventHandler(this.log_in_Click);
             // 
+            // webhookLink
+            // 
+            this.webhookLink.BackColor = System.Drawing.Color.Transparent;
+            this.webhookLink.BorderColor = System.Drawing.Color.Transparent;
+            this.webhookLink.BorderRadius = 15;
+            this.webhookLink.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.webhookLink.DefaultText = "";
+            this.webhookLink.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.webhookLink.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.webhookLink.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.webhookLink.DisabledState.Parent = this.webhookLink;
+            this.webhookLink.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.webhookLink.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.webhookLink.FocusedState.Parent = this.webhookLink;
+            this.webhookLink.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.webhookLink.ForeColor = System.Drawing.Color.Black;
+            this.webhookLink.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.webhookLink.HoverState.Parent = this.webhookLink;
+            this.webhookLink.Location = new System.Drawing.Point(52, 158);
+            this.webhookLink.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.webhookLink.Name = "webhookLink";
+            this.webhookLink.PasswordChar = '\0';
+            this.webhookLink.PlaceholderForeColor = System.Drawing.Color.Transparent;
+            this.webhookLink.PlaceholderText = "";
+            this.webhookLink.SelectedText = "";
+            this.webhookLink.ShadowDecoration.Parent = this.webhookLink;
+            this.webhookLink.Size = new System.Drawing.Size(233, 33);
+            this.webhookLink.TabIndex = 23;
+            this.webhookLink.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(356, 282);
+            this.Controls.Add(this.webhookLink);
             this.Controls.Add(this.log_in);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.webhookLink);
             this.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -128,9 +148,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox webhookLink;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox log_in;
+        private Guna.UI2.WinForms.Guna2TextBox webhookLink;
     }
 }
