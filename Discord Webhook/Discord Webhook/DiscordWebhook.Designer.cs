@@ -358,7 +358,7 @@
             // image
             // 
             this.image.BackColor = System.Drawing.Color.Transparent;
-            this.image.BorderColor = System.Drawing.Color.Transparent;
+            this.image.BorderColor = System.Drawing.Color.Black;
             this.image.BorderRadius = 15;
             this.image.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.image.DefaultText = "";

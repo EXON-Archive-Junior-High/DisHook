@@ -25,7 +25,7 @@ namespace Discord_Webhook
 
         private void DiscordWebhook_Load(object sender, EventArgs e)
         {
-            this.Text = "DisHook v1.5";
+            this.Text = "DisHook v1.6";
 
             Login login = new Login();
             login.ShowDialog();
